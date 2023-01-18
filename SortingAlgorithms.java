@@ -12,7 +12,17 @@ public class SortingAlgorithms
    */
   public static ArrayList<Integer> selectionSortInt(ArrayList<Integer> intList)
   {
-    /* your code goes here */
+    for (int i = 0; i < intList.size()-1; i++) {
+      int smallNum = i;
+      for (int x = i+1; x < intList.size(); x++) {
+        if (intList.get(x) < intList.get(smallNum)) {
+          smallNum = x;
+        }
+      }
+      int temp = intList.get(smallNum);
+      intList.set(smallNum, intList.get(i));
+      intList.set(i, temp);
+    }
     
     return intList;
   }

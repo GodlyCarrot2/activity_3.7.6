@@ -35,10 +35,10 @@ public class TestSort
     ArrayList<Double> testInsertionDouble;
 
     // Test the integer selection sort
-    /*
+    
     testSelectionInt = SortingAlgorithms.selectionSortInt(intList);
     System.out.println(testSelectionInt);
-    */
+    
 
     // Test the double selection sort
     /*
