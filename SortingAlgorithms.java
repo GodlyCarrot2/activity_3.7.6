@@ -34,7 +34,15 @@ public class SortingAlgorithms
    */
   public static ArrayList<Integer> insertionSortInt(ArrayList<Integer> intList)
   {
-    /* your code goes here */
+    for (int i = 1; i < intList.size(); i++) {
+      int comparing = intList.get(i);
+      int compared = i-1;
+      while (compared >= 0 && intList.get(compared) > comparing) {
+          intList.set(compared+1, intList.get(compared));
+          compared--;
+      }
+      intList.set(compared+1, comparing);
+    }
 
     return intList;
   }
@@ -44,9 +52,20 @@ public class SortingAlgorithms
    * @param doubleList an ArrayList of doubles
    * @return doubleList sorted from smallest to largest
    */ 
+
   public static ArrayList<Double> selectionSortDouble(ArrayList<Double> doubleList)
   {
-    /* your code goes here */
+    for (int i = 0; i < doubleList.size()-1; i++) {
+      int smallNum = i;
+      for (int x = i+1; x < doubleList.size(); x++) {
+        if (doubleList.get(x) < doubleList.get(smallNum)) {
+          smallNum = x;
+        }
+      }
+      Double temp = doubleList.get(smallNum);
+      doubleList.set(smallNum, doubleList.get(i));
+      doubleList.set(i, temp);
+    }
     
     return doubleList;
   }
@@ -58,7 +77,15 @@ public class SortingAlgorithms
    */
   public static ArrayList<Double> insertionSortDouble(ArrayList<Double> doubleList)
   {
-    /* your code goes here */
+    for (int i = 1; i < doubleList.size(); i++) {
+      double comparing = doubleList.get(i);
+      int compared = i-1;
+      while (compared >= 0 && doubleList.get(compared) > comparing) {
+          doubleList.set(compared+1, doubleList.get(compared));
+          compared--;
+      }
+      doubleList.set(compared+1, comparing);
+    }
     
     return doubleList;
   }

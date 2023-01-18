@@ -36,26 +36,24 @@ public class TestSort
 
     // Test the integer selection sort
     
-    testSelectionInt = SortingAlgorithms.selectionSortInt(intList);
-    System.out.println(testSelectionInt);
+    //testSelectionInt = SortingAlgorithms.selectionSortInt(intList);
+    //System.out.println(testSelectionInt);
     
 
     // Test the double selection sort
-    /*
-    testSelectionDouble = SortingAlgorithms.selectionSortDouble(doubleList);
-    System.out.println(testSelectionDouble);
-    */
+
+    //testSelectionDouble = SortingAlgorithms.selectionSortDouble(doubleList);
+    //System.out.println(testSelectionDouble);
+
 
     // Test the integer insertion sort
-    /*
+
     testInsertionInt = SortingAlgorithms.insertionSortInt(intList);
     System.out.println(testInsertionInt);
-    */
+
 
     // Test the double insertion sort
-    /*
     testInsertionDouble = SortingAlgorithms.insertionSortDouble(doubleList);
     System.out.println(testInsertionDouble);
-    */
   }
 }
